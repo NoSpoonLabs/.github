@@ -1,0 +1,18 @@
+#!/bin/sh
+# commit-msg hook: refuses a commit message that carries tool attribution text.
+# Source: TheBigNeo-AI/.github hooks/commit-msg; install: README.md «Attribution text check».
+# It runs attribution_check.py from its own folder (installed copy) or from ../scripts (clone of this repository).
+dir=$(dirname "$0")
+script="$dir/attribution_check.py"
+[ -f "$script" ] || script="$dir/../scripts/attribution_check.py"
+if [ ! -f "$script" ]; then
+    echo "commit-msg: attribution_check.py not found, attribution check skipped (the CI check still runs)" >&2
+    exit 0
+fi
+for py in python3 python py; do
+    if "$py" -c "" >/dev/null 2>&1; then
+        exec "$py" "$script" commit-msg "$1"
+    fi
+done
+echo "commit-msg: Python not found, attribution check skipped (the CI check still runs)" >&2
+exit 0
