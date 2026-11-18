@@ -2,7 +2,7 @@
 name: Issue
 about: A change, with how to tell it is done
 ---
-<!-- Format: https://github.com/TheBigNeo-AI/Playbook/blob/main/docs/development/issues.md. Leave out an empty optional section, heading included. -->
+<!-- Format: https://github.com/NoSpoonLabs/Playbook/blob/main/docs/development/issues.md. Leave out an empty optional section, heading included. -->
 
 ## Goal
 <!-- What and why, 1–3 sentences. -->
