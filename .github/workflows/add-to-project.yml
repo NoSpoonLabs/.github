@@ -1,0 +1,22 @@
+# Reusable: adds a pull request to the NoSpoonLabs project «Agent und PokeNexus».
+# Needs the organization secret PROJECT_TOKEN (token with the project scope).
+name: Add to project
+
+on:
+  workflow_call:
+    secrets:
+      PROJECT_TOKEN:
+        required: true
+  pull_request:
+    types: [opened, reopened]
+
+permissions: {}
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/NoSpoonLabs/projects/2
+          github-token: ${{ secrets.PROJECT_TOKEN }}
