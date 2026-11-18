@@ -1,6 +1,6 @@
 # .github
 
-Shared files of the TheBigNeo-AI repositories: the issue and pull request templates and a reusable workflow.
+Shared files of the NoSpoonLabs repositories: the issue and pull request templates and a reusable workflow.
 
 ## Secret scan
 
