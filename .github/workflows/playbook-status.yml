@@ -1,0 +1,27 @@
+# Reusable: fails while the pull request holds a Playbook status file. Skipped for draft pull requests,
+# because the status file is correctly present while the work is in progress.
+name: Playbook status
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    name: Playbook status
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: No Playbook status file
+        run: |
+          files=$(git ls-files .playbook/status)
+          if [ -n "$files" ]; then
+            echo "$files"
+            echo "::error::Playbook status file found: run playbook.py finish at OPEN: 0 and commit the removal; it must not reach main"
+            exit 1
+          fi
