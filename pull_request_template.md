@@ -1,4 +1,4 @@
-<!-- Format: https://github.com/NoSpoonLabs/Agent-Private/blob/main/rules/github.md. Title: imperative, like a commit message. -->
+<!-- Format: https://github.com/NoSpoonLabs/Playbook/blob/main/docs/development/pull-requests.md. Title: imperative, like a commit message. -->
 
 <!-- Closes #N, only when the pull request has an issue; else leave this line out -->
 
