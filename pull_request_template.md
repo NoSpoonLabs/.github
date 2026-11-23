@@ -1,6 +1,6 @@
 <!-- Format: https://github.com/NoSpoonLabs/Playbook/blob/main/docs/development/pull-requests.md. Title: imperative, like a commit message. -->
 
-Closes #<!-- N -->
+<!-- Closes #N, only when the pull request has an issue; else leave this line out -->
 
 ## Changes
 - <!-- What changed, short -->
