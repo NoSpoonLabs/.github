@@ -1,4 +1,4 @@
-<!-- Format: https://github.com/NoSpoonLabs/Playbook/blob/main/docs/development/pull-requests.md. Title: imperative, like a commit message. -->
+<!-- Format: https://github.com/NoSpoonLabs/Playbook/blob/main/docs/development/pull-requests.md. Title: the title of the issue and `(#N)`; without an issue a few words, the topic first. -->
 
 <!-- Closes #N, only when the pull request has an issue; else leave this line out -->
 
